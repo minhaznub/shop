@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Categories</th>
+        </tr>
+
+        </thead>
+        <tbody>
+
+        {% for i in category_list %}
+            <td class="list-group-item"> {{ i.name  }}
+            </td>
+
+
+        </tbody>
+
+{% endfor %}
+
+{% endblock %}

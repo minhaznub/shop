@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Product_Instance Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Buyers</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr>
+        {% for i in product_instences_list %}
+            <td > {{ i.Instences_title  }} </td>
+            <td>{{ i.Instences_description }}</td>
+            <td>{{ i.Type }}</td>
+            <td>{{ i.Buyer }}</td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+      </table>
+
+{% endblock %}

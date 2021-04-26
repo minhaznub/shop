@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr>
+        {% for i in buyer_list %}
+            <td > {{ i.First_Name }} {{ i.Last_Name }} </td>
+            <td>{{ i.Contact_number }}</td>
+            <td>{{ i.Email }}</td>
+            <td>{{ i.Address }}</td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+      </table>
+
+{% endblock %}

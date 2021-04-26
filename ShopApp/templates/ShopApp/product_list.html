@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Products</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr>
+        {% for i in product_list %}
+            <td > {{ i.product_Name  }} </td>
+            <td>{{ i.body }}</td>
+            <td>{{ i.type }}</td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+      </table>
+
+{% endblock %}
